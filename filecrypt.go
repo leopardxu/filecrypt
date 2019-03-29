@@ -26,7 +26,7 @@ func Encrypt(source string, password []byte) {
 	}
 
 	key := password
-	nonce := make([]byte, 48)
+	nonce := make([]byte,128)
 
 	// Randomizing the nonce
 	if _, err := io.ReadFull(rand.Reader, nonce); err != nil {
